@@ -11,7 +11,7 @@ import axios from "axios";
 
 // Change this if your backend runs on a different port
 // (e.g. you used PORT=5050 because 5000 was taken by AirPlay on Mac)
-export const API_BASE = "http://localhost:5050/api";
+export const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5050/api";
 
 const client = axios.create({ baseURL: API_BASE });
 
